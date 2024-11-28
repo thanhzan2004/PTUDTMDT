@@ -1,7 +1,7 @@
--- Tạo cơ sở dữ liệu ecommerce
+-- Tạo cơ sở dữ liệu
 CREATE DATABASE IF NOT EXISTS PTUDTMDT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Sử dụng cơ sở dữ liệu ecommerce
+-- Sử dụng cơ sở dữ liệu
 USE PTUDTMDT;
 
 -- Bảng Khach_hang
