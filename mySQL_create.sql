@@ -124,9 +124,9 @@ CREATE TABLE Binh_luan (
     ID_binh_luan VARCHAR(10) PRIMARY KEY,
     Binh_luan TEXT NULL,
     Ngay_BL DATE NULL,
-    Star INT CHECK (Star BETWEEN 1 AND 5), -- Thêm ràng buộc kiểm tra
+    Star INT,
     ID_KH VARCHAR(10) NULL,
-    ID_SP VARCHAR(10) NULL,
+    ID_SP VARCHAR(10) NULL
 );
 
 -- Bảng Gio_hang
