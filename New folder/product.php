@@ -372,7 +372,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_to_cart'])) {
     </div>
 </div>
 
-<!-- Phần Đánh Giá -->
+
 <!-- Phần Đánh Giá -->
 <div class="product-detail">
     <div class="product-reviews">
