@@ -1,0 +1,80 @@
+/* CSS cho giao diện quản lý tài khoản */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9e6; /* Màu nền nhẹ nhàng giống màu lemonade */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #f9c74f; /* Màu vàng chanh tươi sáng */
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #f1c40f; /* Màu vàng nhẹ cho đường viền */
+}
+
+th {
+    background-color: #f9c74f; /* Màu vàng chanh */
+    color: white;
+}
+
+td {
+    background-color: #fff; /* Màu nền trắng cho các ô dữ liệu */
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #f9c74f; /* Màu vàng nhẹ cho đường viền */
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #ffab00; /* Màu cam nhạt */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff6600; /* Màu cam đậm hơn khi hover */
+}
+
+form {
+    display: inline-block;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7; /* Màu xám nhạt cho các dòng chẵn */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Màu trắng cho các dòng lẻ */
+}
+
+table tbody tr td {
+    vertical-align: middle;
+}

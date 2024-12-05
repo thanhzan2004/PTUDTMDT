@@ -1,0 +1,97 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cài đặt font và màu nền cho toàn bộ trang */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8f2; /* Nền sáng nhẹ */
+    color: #333;
+    padding: 20px;
+}
+
+/* Tiêu đề trang */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f4b400; /* Màu vàng tươi cho tiêu đề */
+    margin-bottom: 30px;
+}
+
+/* Định dạng bảng */
+.account-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-table th, .account-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.account-table th {
+    background-color: #f4b400; /* Màu vàng tươi cho tiêu đề cột */
+    color: white;
+}
+
+.account-table td {
+    background-color: #f7f8f2; /* Nền sáng cho các ô dữ liệu */
+}
+
+.account-table tr:nth-child(even) td {
+    background-color: #e9f5db; /* Nền xanh lá nhạt cho các dòng chẵn */
+}
+
+.account-table tr:hover td {
+    background-color: #e9f5db; /* Nền sáng khi hover qua dòng */
+}
+
+/* Định dạng form thay đổi quyền */
+.role-form {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.role-select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f7f8f2;
+    margin-right: 10px;
+}
+
+.role-button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background-color: #f4b400; /* Màu vàng tươi cho nút */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.role-button:hover {
+    background-color: #e09b00; /* Màu vàng đậm khi hover */
+}
+
+/* Hiệu ứng khi hover qua các dòng */
+.account-table tr:hover {
+    background-color: #f0f0f0; /* Đổi nền khi hover qua dòng */
+}
+
+/* Tối ưu khoảng cách các phần tử trong bảng */
+.account-table th, .account-table td {
+    padding: 10px 20px;
+}
+

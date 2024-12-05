@@ -1,0 +1,87 @@
+/*edit_customer*/
+/* Reset một số thuộc tính mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cài đặt font và background cho toàn bộ trang */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8f2; /* Màu nền sáng nhẹ, giống như màu lemonade */
+    color: #333;
+}
+
+/* Định dạng header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px; /* Tạo khoảng cách phía trên tiêu đề */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #f4b400; /* Màu vàng tươi cho tiêu đề */
+}
+
+/* Định dạng container chính của form */
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0e68c; /* Màu vàng nhẹ cho đường viền */
+}
+
+/* Form chỉnh sửa thông tin */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-form label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #5d8c3e; /* Màu xanh nhẹ cho nhãn */
+}
+
+.edit-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d1e7e3; /* Màu xanh nhạt cho các ô input */
+    border-radius: 4px;
+    background-color: #f7f8f2; /* Nền sáng cho các ô nhập liệu */
+}
+
+.edit-form button {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #f4b400; /* Màu vàng tươi cho nút cập nhật */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.edit-form button:hover {
+    background-color: #e09b00; /* Màu vàng đậm khi hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #5d8c3e; /* Màu xanh nhẹ cho footer */
+}
+
+/* Hiệu ứng hover cho input */
+.edit-form input:hover {
+    border-color: #f4b400; /* Đổi màu viền thành vàng khi hover */
+}
+

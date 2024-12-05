@@ -1,0 +1,110 @@
+/* Cơ bản */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Định dạng cho tiêu đề */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #f7c14c; /* Vàng nhạt */
+    margin-top: 20px;
+}
+
+/* Table Style */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    color: #555;
+}
+
+th {
+    background-color: #f7c14c; /* Vàng nhạt */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+tr:hover {
+    background-color: #f7f7f7;
+}
+
+/* Nút Chỉnh sửa */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Form chỉnh sửa đơn hàng */
+#editOrderForm {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+select, input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+select {
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #f7c14c; /* Vàng nhạt */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #e5b13b;
+}
+
+/* Ẩn form chỉnh sửa */
+#editOrderForm {
+    display: none;
+}
+
+/* Chỉnh sửa khi hiển thị form */
+#editOrderForm.show {
+    display: block;
+}

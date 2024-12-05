@@ -1,0 +1,112 @@
+/* Reset một số thuộc tính mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cài đặt font và background cho toàn bộ trang */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8f2; /* Màu nền sáng nhẹ */
+    color: #333;
+}
+
+/* Tiêu đề trang */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.5rem;
+    color: #f4b400; /* Màu vàng tươi cho tiêu đề */
+}
+
+/* Cấu trúc của bảng */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0e68c; /* Màu vàng nhẹ cho đường viền */
+    margin-top: 20px;
+}
+
+/* Định dạng bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #f4b400; /* Màu vàng tươi cho tiêu đề cột */
+    color: white;
+}
+
+table td {
+    background-color: #f7f8f2; /* Nền sáng cho các ô dữ liệu */
+}
+
+table tr:nth-child(even) td {
+    background-color: #e9f5db; /* Nền xanh lá nhạt cho các dòng chẵn */
+}
+
+/* Cải thiện giao diện các ô input */
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d1e7e3;
+    border-radius: 4px;
+    background-color: #f7f8f2;
+    width: 100px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #f4b400; /* Màu vàng tươi cho nút cập nhật */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #e09b00; /* Màu vàng đậm khi hover */
+}
+
+/* Định dạng trạng thái của sản phẩm */
+.in-stock {
+    color: green;
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+}
+
+/* Cải thiện giao diện nút quay lại */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #5d8c3e; /* Màu xanh lá cây */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-btn:hover {
+    background-color: #4b7a2d; /* Màu xanh lá đậm khi hover */
+}
