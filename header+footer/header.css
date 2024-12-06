@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI',sans-serif;
+  }
+  
+  .header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo {
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .highlighted {
+    color: #fdda44;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    width: 30%; 
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 20px;
+    flex: 1;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .search-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .search-btn i {
+    color: #fafafa; /* Màu biểu tượng */
+    font-size: 16px;
+  }
+  
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .user-actions a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-actions .badge,
+.user-actions .cart-count {
+  background-color: #fdda44;
+  color: #000;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 5px;
+}
+
+  
+  .header-bottom {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+  }
+
+  .nav-menu a:hover {
+    color: #fdda44;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px 0;
+  }
+  
+  .dropdown-content a {
+    color: #000;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #fdda44;
+    color: #000;
+  }
+
+  /* Đảm bảo rằng bạn đã tải Font Awesome vào trang của mình */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.dropdown i {
+  margin-left: 5px;
+  font-size: 14px; /* Để mũi tên nhỏ lại */
+  color: #888; /* Đổi màu mũi tên thành màu xám nhạt */
+}
+
+.dropdown:hover i {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Tổng thể căn chỉnh */
+  .header {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
