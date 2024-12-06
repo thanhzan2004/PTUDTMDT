@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        :root {
+            --primary-color: #ffd700;
+            --secondary-color: #f4c430;
+            --text-color: #333;
+            --border-color: #ddd;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .filter-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-button:hover,
+        .filter-button.active {
+            background: var(--primary-color);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .order-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .order-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .order-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 15px;
+        }
+
+        .status-tag {
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status-pending { background: #fff3cd; color: #856404; }
+        .status-processing { background: #cce5ff; color: #004085; }
+        .status-shipped { background: #d4edda; color: #155724; }
+        .status-delivered { background: #d1e7dd; color: #0f5132; }
+        .status-cancelled { background: #f8d7da; color: #721c24; }
+
+        .order-content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .order-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .order-details {
+            flex: 1;
+        }
+
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .product-variant {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .order-quantity {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .order-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 15px;
+        }
+
+        .total-amount {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .action-button {
+            padding: 8px 16px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            margin-left: 10px;
+        }
+
+        .primary-button {
+            background: var(--primary-color);
+        }
+
+        .secondary-button {
+            background: white;
+            border-color: var(--border-color);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .order-content {
+                flex-direction: column;
+            }
+
+            .order-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .order-footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .action-button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="filter-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search orders by product name or order number...">
+            </div>
+            <div class="filter-options">
+                <button class="filter-button active" data-status="all">All Orders</button>
+                <button class="filter-button" data-status="pending">Pending Payment</button>
+                <button class="filter-button" data-status="processing">Processing</button>
+                <button class="filter-button" data-status="shipped">Shipped</button>
+                <button class="filter-button" data-status="delivered">Delivered</button>
+                <button class="filter-button" data-status="cancelled">Cancelled</button>
+            </div>
+        </div>
+
+        <div class="order-list">
+            <!-- Order 1 -->
+            <div class="order-item" data-status="processing">
+                <div class="order-header">
+                    <div>Order #123456789</div>
+                    <div class="status-tag status-processing">Processing</div>
+                </div>
+                <div class="order-content">
+                    <img src="/api/placeholder/100/100" alt="Product" class="order-image">
+                    <div class="order-details">
+                        <div class="product-name">Premium Wireless Headphones</div>
+                        <div class="product-variant">Color: Black | Size: Standard</div>
+                        <div class="order-quantity">Quantity: 1</div>
+                    </div>
+                </div>
+                <div class="order-footer">
+                    <div class="order-total">
+                        Total:<span class="total-amount">$299.99</span>
+                    </div>
+                    <div>
+                        <button class="action-button secondary-button">Track Order</button>
+                        <button class="action-button primary-button">Contact Seller</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 2 -->
+            <div class="order-item" data-status="pending">
+                <div class="order-header">
+                    <div>Order #123456790</div>
+                    <div class="status-tag status-pending">Pending Payment</div>
+                </div>
+                <div class="order-content">
+                    <img src="/api/placeholder/100/100" alt="Product" class="order-image">
+                    <div class="order-details">
+                        <div class="product-name">Smartphone Case</div>
+                        <div class="product-variant">Color: Clear | Model: iPhone 14 Pro</div>
+                        <div class="order-quantity">Quantity: 2</div>
+                    </div>
+                </div>
+                <div class="order-footer">
+                    <div class="order-total">
+                        Total:<span class="total-amount">$39.98</span>
+                    </div>
+                    <div>
+                        <button class="action-button secondary-button">Cancel Order</button>
+                        <button class="action-button primary-button">Pay Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 3 -->
+            <div class="order-item" data-status="delivered">
+                <div class="order-header">
+                    <div>Order #123456791</div>
+                    <div class="status-tag status-delivered">Delivered</div>
+                </div>
+                <div class="order-content">
+                    <img src="/api/placeholder/100/100" alt="Product" class="order-image">
+                    <div class="order-details">
+                        <div class="product-name">Smart Watch</div>
+                        <div class="product-variant">Color: Silver | Size: 44mm</div>
+                        <div class="order-quantity">Quantity: 1</div>
+                    </div>
+                </div>
+                <div class="order-footer">
+                    <div class="order-total">
+                        Total:<span class="total-amount">$399.99</span>
+                    </div>
+                    <div>
+                        <button class="action-button secondary-button">Write Review</button>
+                        <button class="action-button primary-button">Buy Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const orders = document.querySelectorAll('.order-item');
+        const searchInput = document.getElementById('searchInput');
+
+        // Filter button functionality
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Get the status to filter by
+                const statusToFilter = button.getAttribute('data-status');
+                
+                // Show/hide orders based on status
+                orders.forEach(order => {
+                    if (statusToFilter === 'all' || order.getAttribute('data-status') === statusToFilter) {
+                        order.classList.remove('hidden');
+                    } else {
+                        order.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeStatus = document.querySelector('.filter-button.active').getAttribute('data-status');
+
+            orders.forEach(order => {
+                const orderText = order.textContent.toLowerCase();
+                const orderStatus = order.getAttribute('data-status');
+                
+                const matchesSearch = orderText.includes(searchTerm);
+                const matchesFilter = activeStatus === 'all' || orderStatus === activeStatus;
+
+                if (matchesSearch && matchesFilter) {
+                    order.classList.remove('hidden');
+                } else {
+                    order.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

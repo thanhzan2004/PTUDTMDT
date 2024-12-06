@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Lemonade Cosmetics</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* White background for the entire page */
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+
+    /* Container for each section */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px;
+      gap: 30px;
+    }
+
+    section {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #333;
+      text-align: left;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    /* Equal Division of Text and Image */
+    .about-us, .contact-us {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .about-us .text, .contact-us .text {
+      flex: 1; /* Take up equal space as the image */
+      padding-right: 20px; /* Space between the text and image */
+    }
+
+    .about-us img, .contact-us img {
+      flex: 1; /* Take up equal space as the text */
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-left: 20px;
+    }
+
+    /* Contact Form - Smaller and Centered */
+    #contact-form {
+      max-width: 600px;
+      margin: 0 auto; /* Center-align the form */
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #d3d027;
+      color: rgb(255, 255, 255);
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer Section */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .about-us, .contact-us {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-us .text, .contact-us .text {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .about-us img, .contact-us img {
+        width: 80%;
+        margin: 20px 0;
+      }
+
+      #contact-form {
+        width: 100%;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <a href="#about-us">About Us</a>
+      <a href="#contact-us">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about-us" class="about-us">
+    <div class="text">
+      <h2>Về Chúng Tôi</h2>
+      <p>Lemonade Cosmetics là thương hiệu mỹ phẩm Việt Nam, được thành lập vào năm 2018 bởi Makeup Artist Quách Ánh với mục tiêu mang đến giải pháp trang điểm dễ dàng cho phụ nữ Việt.</p>
+    </div>
+    <img src="https://theme.hstatic.net/1000303351/1001070461/14/page-about-new-image-1.png?v=1843" alt="Lemonade Cosmetics Image">
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact-us" class="contact-us">
+    <div class="text">
+      <h2>Liên Hệ</h2>
+      <p>Lemonade mong muốn lắng nghe ý kiến của bạn. Vui lòng gửi mọi yêu cầu, thắc mắc theo form thông tin bên dưới. Hoặc liên hệ qua Zalo, Messenger, Instagram ở thanh liên hệ bên phải màn hình. Lemonade rất hân hạnh được hỗ trợ bạn. Mọi yêu cầu của bạn sẽ được xử lý và phản hồi trong thời gian sớm nhất.</p>
+    </div>
+    <img src="https://theme.hstatic.net/1000303351/1001070461/14/page-about-new-image-2.png?v=1843" alt="Contact Us Image">
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact-form">
+    <h2>Send Us a Message</h2>
+    <form action="/submit-form" method="POST">
+      <input type="text" id="name" name="name" placeholder="Tên của bạn" required>
+      <input type="email" id="email" name="email" placeholder="Email của bạn" required>
+      <input type="number" id="number" name="number" placeholder="Số điện thoại của bạn" required>
+      <textarea id="message" name="message" placeholder="Lời nhắn của bạn" rows="5" required></textarea>
+      <button type="submit">Gửi thông tin</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Lemonade Cosmetics. All rights reserved.</p>
+    <p><a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
