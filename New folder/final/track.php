@@ -95,7 +95,10 @@ $conn->close();
             text-align:center;
             margin-top:30px;
         }
-
+        h3{
+            margin-left:30px;
+            margin-top:100px;
+        }
         form {
             margin-top: 20px;
         }
@@ -131,6 +134,9 @@ $conn->close();
         .result-table th {
             background-color: #e6ac00;
         }
+        li{
+            line-height:25px;
+        }
     </style>
 </head>
 <body>
@@ -141,6 +147,15 @@ $conn->close();
             <input type="text" id="ID_DH" name="ID_DH" placeholder="Nhập ID_DH" required>
             <button type="submit">Tra cứu</button>
         </form>
+    </div>
+    <div class="contact-info">
+        <h3>Liên hệ với chúng tôi nếu bạn đang cần gấp</h3>
+        <ul>
+            <li><strong>Điện thoại:</strong> 0379321256</li>
+            <li><strong>Email:</strong> nguyenthaontt04@gmail.com</li>
+            <li><strong>Địa chỉ:</strong> 279 Nguyễn Tri Phương, Phường 5, Quận 10, TP Hồ Chí Minh</li>
+            <li><strong>Giờ làm việc:</strong> 9:00 AM - 6:00 PM (Thứ 2 đến Thứ 6)</li>
+        </ul>
     </div>
 </body>
 </html>
