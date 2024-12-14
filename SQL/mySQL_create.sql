@@ -46,13 +46,10 @@ CREATE TABLE don_hang_chi_tiet (
 
 -- Bảng Bai_viet
 CREATE TABLE Bai_viet (
-    ID_Bai_viet VARCHAR(10) PRIMARY KEY,
+    ID_Bai_viet INT AUTO_INCREMENT PRIMARY KEY,
     Tua_de VARCHAR(250) NULL,
     Ngay_viet DATE NULL,
     Noi_dung TEXT NULL,
     Anh_bai_viet TEXT NULL,
     Phan_loai VARCHAR(50) NULL
 );
-
-ALTER TABLE Bai_viet
-MODIFY COLUMN ID_Bai_viet INT AUTO_INCREMENT;
