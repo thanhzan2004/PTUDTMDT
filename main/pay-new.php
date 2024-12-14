@@ -294,10 +294,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <div class="form-group">
-            <label for="payment_method">Hình thức thanh toán</label>
+            <label for="payment_method">Phương thức thanh toán</label>
             <select id="payment_method" name="payment_method" required>
-                <option value="COD">Thanh toán khi nhận hàng</option>
+                <option value="cod">Thanh toán khi nhận hàng</option>
+                <option value="online">Thanh toán online</option>
             </select>
+        </div>
+
+        <div id="bank_info" style="display: none; margin-top: 20px;">
+            <h4>Thông tin chuyển khoản</h4>
+            <p><strong>Ngân hàng:</strong> Vietcombank</p>
+            <p><strong>Số tài khoản:</strong> 123456789</p>
+            <p><strong>Chủ tài khoản:</strong> Nguyễn Văn A</p>
+            <p><em>Vui lòng ghi rõ mã đơn hàng trong nội dung chuyển khoản.</em></p>
         </div>
 
         <div class="payment-actions">
@@ -305,6 +314,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </form>
 </div>
+<script>
+    document.getElementById('payment_method').addEventListener('change', function() {
+        const bankInfo = document.getElementById('bank_info');
+        if (this.value === 'online') {
+            bankInfo.style.display = 'block';
+        } else {
+            bankInfo.style.display = 'none';
+        }
+    });
+</script>
 
 </body>
 </html>
