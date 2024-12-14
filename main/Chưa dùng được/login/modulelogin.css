@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin: 20px;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-container {
+  display: flex;
+  width: 800px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.popup-left {
+  background: #f4f4f4;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa nội dung */
+  justify-content: center; /* Căn giữa theo trục dọc */
+}
+
+.popup-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.popup-left li {
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-size: 14px; /* Tăng cỡ chữ để nổi bật */
+}
+
+.popup-left li.active {
+  background: #000;
+  color: #fff;
+  font-size: 14px; 
+  border-radius: 5px; 
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* Căn giữa logo */
+  align-items: center;
+  padding: 20px 0; /* Khoảng cách trên và dưới logo */
+  border-bottom: 1px solid #ccc; /* Đường viền phân cách logo với danh sách */
+}
+
+.logo {
+  height: auto;
+  font-size: 26px !important; /* Tăng cỡ chữ logo */
+  font-weight: bold; /* In đậm logo */
+  color: #000; /* Màu chữ logo */
+  text-transform: uppercase; /* Chữ in hoa nếu cần */
+}
+
+.highlighted {
+  color: #fdda44;
+  font-size: 26px
+}
+
+.popup-right {
+  width: 70%;
+  padding: 30px;
+}
+
+.popup-right h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; 
+}
+
+.hidden {
+  display: none;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Hoặc `space-between` nếu muốn giãn cách đều */
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.gender label {
+  margin-right: 20px; /* Khoảng cách giữa các radio */
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.gender input[type="radio"] {
+  margin-right: 6px; /* Khoảng cách giữa nút radio và chữ */
+  transform: scale(0.9); 
+}
+
+.hidden {
+  display: none;
+}
+

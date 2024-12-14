@@ -1,0 +1,97 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #FFEB3B; /* Màu vàng chanh */
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #FFB74D; /* Màu cam nhạt khi hover */
+    color: white;
+}
+
+.sidebar ul li a.active {
+    background-color: #8BC34A; /* Màu xanh lá cây tươi cho trang hiện tại */
+    color: white;
+}
+.main-content {
+    margin-left: 250px; /* Để nội dung tránh bị sidebar che khuất */
+    padding: 20px;
+    background-color: #F5F5F5; /* Màu trắng kem */
+    min-height: 100vh;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .product-form {
+        margin-left: 0; /* Bỏ margin trái khi màn hình nhỏ */
+        max-width: 100%; /* Chiều rộng tối đa 100% */
+    }
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px; /* Giảm padding của nút để gọn gàng */
+    font-size: 1.1em;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e22; /* Màu vàng đậm hơn khi hover */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+
+
+
+
+
+
+

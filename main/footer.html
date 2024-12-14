@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Liên Hệ Nổi</title>
+    <style>
+        /* CSS cho icon liên hệ */
+        .contact-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000; /* Đảm bảo các icon nằm trên các phần tử khác */
+        }
+
+        .contact-icons a {
+            background-color: #25D366; /* Màu nền của WhatsApp */
+            color: white;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .contact-icons a:hover {
+            background-color: #128C7E; /* Màu nền khi hover */
+        }
+
+        /* Màu nền của icon Facebook */
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .facebook:hover {
+            background-color: #2d4373;
+        }
+
+        /* Màu nền của icon Call */
+        .call {
+            background-color: #34b7f1;
+        }
+
+        .call:hover {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-icons">
+        <!-- Liên kết WhatsApp -->
+        <a href="https://wa.me/123456789" target="_blank" title="Chat với chúng tôi qua WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <!-- Liên kết Facebook -->
+        <a href="https://www.facebook.com/yourpage" target="_blank" class="facebook" title="Liên hệ qua Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- Liên kết Call -->
+        <a href="tel:+123456789" target="_blank" class="call" title="Gọi điện cho chúng tôi">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- Thêm các biểu tượng FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
+
+<html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>LEMONADE</title>
+    <link rel="stylesheet" href="style.css">  
+</head>  
+<body>
+    <footer>  
+        <div class="footercontainer">  
+            <div class="column">  
+                <h3>ABOUT US</h3>
+                <hr>
+                <p>LEMONADE COSMETICS - CÔNG TY CỔ PHẦN</p>  
+                <p>GENA THÁI BÌNH DƯƠNG - MÃ SỐ DOANH NGHIỆP: 0108335146</p>  
+                <p><a href="#">Câu chuyện thương hiệu</a></p>  
+                <p><a href="#">Hướng dẫn mua hàng</a></p>  
+                <a href="http://online.gov.vn/Home/WebDetails/49430?AspxAutoDetectCookieSupport=1">
+                    <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" alt="Đã thông báo Bộ Công Thương" title="Click để xem thông tin chi tiết">
+                </a> 
+            </div>  
+        <div class="column">  
+            <h3>CHÍNH SÁCH</h3>
+            <hr> 
+            <p><a href="#">Chính sách đổi trả</a></p>  
+        </div>  
+        <div class="column">  
+            <h3>LIÊN HỆ</h3> 
+            <hr> 
+            <p><a href="#">Trang liên hệ</a></p>  
+        </div>  
+        <div class="column">  
+            <h3>FANPAGE</h3>
+            <hr>  
+            <p>Lemonade Cosmetics</p>  
+        <div class="social-icons">  
+            <a href="https://www.tiktok.com/@lemonade_cosmetics" target="_blank"><img src="https://theme.hstatic.net/1000303351/1001070461/14/b1.jpg?v=1843" alt="TikTok"></a>
+            <a href="https://shopee.vn/lemonade_officialstore" target="_blank"><img src="https://theme.hstatic.net/1000303351/1001070461/14/b2.jpg?v=1843" alt="Shopee"></a> 
+            <a href="https://www.lazada.vn/shop/lemonade/?path=promotion-434283-0.htm&tab=promotion" target="_blank"><img src="https://theme.hstatic.net/1000303351/1001070461/14/b3.jpg?v=1843" alt="Lazada"></a> 
+            <a href="https://tiki.vn/cua-hang/lemonade" target="_blank"><img src="https://theme.hstatic.net/1000303351/1001070461/14/b4.jpg?v=1843" alt="Tiki"></a>
+        </div>  
+        </div>  
+        </div>  
+        <div class="copyright">  
+        <p>Copyright © 2024 LEMONADE Powered by Nhom01</p>  
+        </div> 
+        <button id="back-to-top" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button> 
+
+          <script>
+// Lấy phần tử nút "Back to Top"
+const backToTopButton = document.getElementById('back-to-top');
+
+// Hiện nút khi cuộn xuống
+window.addEventListener('scroll', () => {
+if (window.scrollY > 300) { // Nếu cuộn xuống hơn 300px
+    backToTopButton.style.display = 'flex';
+} else {
+    backToTopButton.style.display = 'none';
+}
+});
+
+// Khi nhấn vào nút, cuộn lên đầu trang
+backToTopButton.addEventListener('click', () => {
+window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // Cuộn mượt
+});
+});
+
+          </script>
+    </footer>
+</body>
+</html> 

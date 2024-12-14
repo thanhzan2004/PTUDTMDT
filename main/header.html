@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEMONADE</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Đảm bảo .header-top sử dụng Flexbox */
+.header-top {
+  display: flex;
+  justify-content: space-between; /* Căn chỉnh các phần tử trái phải */
+  align-items: center; /* Căn chỉnh dọc cho các phần tử */
+  padding: 10px 20px; /* Thêm khoảng cách xung quanh */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-bar {
+  flex: 1; /* Cho thanh tìm kiếm chiếm không gian còn lại */
+  display: flex;
+  justify-content: center; /* Căn giữa thanh tìm kiếm */
+}
+
+.search-bar form {
+  display: flex; /* Căn chỉnh thanh input và button theo chiều ngang */
+  width: 100%; /* Chiếm hết chiều rộng trong .search-bar */
+}
+
+.search-bar input {
+  width: 80%; /* Chiếm 80% chiều rộng của thanh tìm kiếm */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; /* Bo tròn cho phần bên trái */
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px;
+  border: 0;
+  border-radius: 50px; /* Bo tròn cho phần bên phải */
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #ddd; /* Đổi màu khi hover */
+}
+
+.user-actions a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.user-actions a:hover {
+  color: #ffe047; /* Đổi màu khi hover */
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <!-- Phần trên -->
+    <div class="header-top">
+      <div class="logo">
+        <span>LEMONADE</span>
+      </div>
+      <div class="search-bar">
+        <form action="productlist.php" method="get">
+          <input type="text" name="query" placeholder="Nhập tên sản phẩm cần tìm...">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+
+      <div class="user-actions">
+        <a href="track.php" class="account">Tra cứu đơn</a>
+        <a href="cart.php" class="cart">Giỏ hàng</a>
+      </div>
+    </div>
+
+    <!-- Phần dưới -->
+    <div class="header-bottom">
+      <nav class="nav-menu">
+        <a href="index.php">TRANG CHỦ</a>        
+        <a href="about.php">GIỚI THIỆU</a>
+        <div class="dropdown">
+          <a href="productlist.php">SẢN PHẨM <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <a href="bloglist.php">BLOG</a>
+        <div class="dropdown">
+          <a href="contact.php">LIÊN HỆ</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+</body>
+</html>
