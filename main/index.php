@@ -202,4 +202,6 @@ $blog_result = $conn->query($blog_sql);
 </body>
 </html>
 
-<?php $conn->close(); ?>
+<?php $conn->close(); 
+include('footer.html');
+?>

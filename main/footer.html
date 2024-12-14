@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icon Liên Hệ Nổi</title>
-    <style>
-        /* CSS cho icon liên hệ */
-        .contact-icons {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 1000; /* Đảm bảo các icon nằm trên các phần tử khác */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Icons Floating</title>
+  <!-- Thêm Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* CSS cho các icon liên hệ */
+    .ssocial-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000; /* Đảm bảo các icon ở trên cùng */
+    }
 
-        .contact-icons a {
-            background-color: #25D366; /* Màu nền của WhatsApp */
-            color: white;
-            font-size: 24px;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
+    .ssocial-icons a {
+      width: 50px; /* Đặt width cho icon */
+      height: 50px; /* Đặt height cho icon */
+      font-size: 24px; /* Kích thước icon */
+      color: #000;
+      background-color: #fff;
+      border-radius: 50%; /* Tạo hình tròn */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+    }
 
-        .contact-icons a:hover {
-            background-color: #128C7E; /* Màu nền khi hover */
-        }
+    .ssocial-icons a:hover {
+      color: #fff;
+      background-color: #ff6f61; /* Màu khi hover */
+    }
 
-        /* Màu nền của icon Facebook */
-        .facebook {
-            background-color: #3b5998;
-        }
-
-        .facebook:hover {
-            background-color: #2d4373;
-        }
-
-        /* Màu nền của icon Call */
-        .call {
-            background-color: #34b7f1;
-        }
-
-        .call:hover {
-            background-color: #007BFF;
-        }
-    </style>
+    /* Đảm bảo icon hiển thị đúng tỉ lệ và không bị lệch */
+    .ssocial-icons a i {
+      display: block;
+      width: 100%;
+      height: 50%;
+      object-fit: contain;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="contact-icons">
-        <!-- Liên kết WhatsApp -->
-        <a href="https://wa.me/123456789" target="_blank" title="Chat với chúng tôi qua WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        
-        <!-- Liên kết Facebook -->
-        <a href="https://www.facebook.com/yourpage" target="_blank" class="facebook" title="Liên hệ qua Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
+  <!-- Các icon liên hệ thả nổi -->
+  <div class="ssocial-icons">
+    <!-- Facebook Icon -->
+    <a href="https://www.facebook.com/lemonade" target="_blank">
+      <i class="fab fa-facebook-square"></i>
+    </a>
 
-        <!-- Liên kết Call -->
-        <a href="tel:+123456789" target="_blank" class="call" title="Gọi điện cho chúng tôi">
-            <i class="fas fa-phone-alt"></i>
-        </a>
-    </div>
+    <!-- Instagram Icon -->
+    <a href="https://www.instagram.com/lemonade" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
 
-    <!-- Thêm các biểu tượng FontAwesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- TikTok Icon -->
+    <a href="https://www.tiktok.com/@lemonade" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+
 </body>
 </html>
+
+
+
+
+
 
 <html>  
 <html lang="vi">  
@@ -128,29 +125,6 @@
         <button id="back-to-top" class="back-to-top">
             <i class="fas fa-arrow-up"></i>
         </button> 
-
-          <script>
-// Lấy phần tử nút "Back to Top"
-const backToTopButton = document.getElementById('back-to-top');
-
-// Hiện nút khi cuộn xuống
-window.addEventListener('scroll', () => {
-if (window.scrollY > 300) { // Nếu cuộn xuống hơn 300px
-    backToTopButton.style.display = 'flex';
-} else {
-    backToTopButton.style.display = 'none';
-}
-});
-
-// Khi nhấn vào nút, cuộn lên đầu trang
-backToTopButton.addEventListener('click', () => {
-window.scrollTo({
-    top: 0,
-    behavior: 'smooth', // Cuộn mượt
-});
-});
-
-          </script>
     </footer>
 </body>
 </html> 
